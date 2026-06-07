@@ -18,19 +18,19 @@ national teams, sync fixtures to Google Calendar, and compete with friends in a 
 
 ## 🧱 Tech stack
 
-| Area | Choice |
-|---|---|
-| Framework | React 19 + TypeScript + Vite (React Compiler enabled) |
-| Package manager | pnpm |
-| Styling | Tailwind CSS + shadcn/ui + design tokens (light/dark) |
-| Animation | Motion + tailwindcss-animate |
-| Server state | TanStack Query (React Query) |
-| Global state | Zustand (minimal: auth/UI) |
-| i18n | react-i18next (es / en) |
-| Backend | Firebase (Firestore + Auth) |
-| Data source | football-data.org → GitHub Actions cron → Firestore |
-| Hosting | Vercel |
-| Architecture | Feature-Sliced Design |
+| Area            | Choice                                                |
+| --------------- | ----------------------------------------------------- |
+| Framework       | React 19 + TypeScript + Vite (React Compiler enabled) |
+| Package manager | pnpm                                                  |
+| Styling         | Tailwind CSS + shadcn/ui + design tokens (light/dark) |
+| Animation       | Motion + tailwindcss-animate                          |
+| Server state    | TanStack Query (React Query)                          |
+| Global state    | Zustand (minimal: auth/UI)                            |
+| i18n            | react-i18next (es / en)                               |
+| Backend         | Firebase (Firestore + Auth)                           |
+| Data source     | football-data.org → GitHub Actions cron → Firestore   |
+| Hosting         | Vercel                                                |
+| Architecture    | Feature-Sliced Design                                 |
 
 ## 🚀 Getting started
 
@@ -44,12 +44,12 @@ App runs on the Vite dev server (default `http://localhost:5173`).
 
 ### Scripts
 
-| Command | Description |
-|---|---|
-| `pnpm dev` | Start the dev server |
-| `pnpm build` | Type-check + production build |
-| `pnpm preview` | Preview the production build |
-| `pnpm lint` | Run ESLint |
+| Command        | Description                   |
+| -------------- | ----------------------------- |
+| `pnpm dev`     | Start the dev server          |
+| `pnpm build`   | Type-check + production build |
+| `pnpm preview` | Preview the production build  |
+| `pnpm lint`    | Run ESLint                    |
 
 ## 🗂️ Architecture
 
@@ -116,13 +116,13 @@ cannot be done from this repo):
 
 ### Firestore data model
 
-| Collection | Doc | Key fields | Written by |
-|---|---|---|---|
-| `teams` | `{teamId}` | `name`, `code` (FIFA 3-letter), `crestUrl`, `groupId` | Sync job |
-| `groups` | `{groupId}` | `name` (e.g. "Group A"), `teamIds[]` | Sync job |
-| `matches` | `{matchId}` | `utcDate`, `status`, `stage`, `group`, `homeTeamId`, `awayTeamId`, `score` | Sync job |
-| `users` | `{uid}` | `displayName`, `photoURL`, `totalPoints` | The user (own doc) |
-| `predictions` | `{uid}_{matchId}` | `userId`, `matchId`, `homeScore`, `awayScore`, `points` | The user (own doc) |
+| Collection    | Doc               | Key fields                                                                 | Written by         |
+| ------------- | ----------------- | -------------------------------------------------------------------------- | ------------------ |
+| `teams`       | `{teamId}`        | `name`, `code` (FIFA 3-letter), `crestUrl`, `groupId`                      | Sync job           |
+| `groups`      | `{groupId}`       | `name` (e.g. "Group A"), `teamIds[]`                                       | Sync job           |
+| `matches`     | `{matchId}`       | `utcDate`, `status`, `stage`, `group`, `homeTeamId`, `awayTeamId`, `score` | Sync job           |
+| `users`       | `{uid}`           | `displayName`, `photoURL`, `totalPoints`                                   | The user (own doc) |
+| `predictions` | `{uid}_{matchId}` | `userId`, `matchId`, `homeScore`, `awayScore`, `points`                    | The user (own doc) |
 
 ### Security rules (starting point)
 
@@ -161,15 +161,15 @@ bypasses these rules), so the browser only ever reads from Firestore.
 Phases are sequential; each builds on the previous. Granular tasks live in
 [`checklist.md`](checklist.md) (a working file, deleted once the project ships).
 
-| Phase | Scope | Status |
-|---|---|---|
-| 0 | Foundations (Tailwind, shadcn, router, i18n, FSD skeleton, tooling) | ⬜ Not started |
-| 1 | Firebase & data pipeline (Firestore, sync job, GitHub Actions) | ⬜ Not started |
-| 2 | Matches section (lists, groups, brackets) | ⬜ Not started |
-| 3 | Teams section (search, detail, fixtures) | ⬜ Not started |
-| 4 | Calendar sync (Google auth + Calendar API) | ⬜ Not started |
-| 5 | Predictions (scoring engine, ranking, rules hardening) | ⬜ Not started |
-| 6 | Polish & ship (a11y, perf, SEO, deploy) | ⬜ Not started |
+| Phase | Scope                                                               | Status         |
+| ----- | ------------------------------------------------------------------- | -------------- |
+| 0     | Foundations (Tailwind, shadcn, router, i18n, FSD skeleton, tooling) | ⬜ Not started |
+| 1     | Firebase & data pipeline (Firestore, sync job, GitHub Actions)      | ⬜ Not started |
+| 2     | Matches section (lists, groups, brackets)                           | ⬜ Not started |
+| 3     | Teams section (search, detail, fixtures)                            | ⬜ Not started |
+| 4     | Calendar sync (Google auth + Calendar API)                          | ⬜ Not started |
+| 5     | Predictions (scoring engine, ranking, rules hardening)              | ⬜ Not started |
+| 6     | Polish & ship (a11y, perf, SEO, deploy)                             | ⬜ Not started |
 
 Legend: ⬜ Not started · 🚧 In progress · ✅ Done
 
