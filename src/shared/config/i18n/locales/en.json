@@ -1,0 +1,35 @@
+{
+  "app": {
+    "title": "World Cup 2026",
+    "tagline": "Live the World Cup: matches, teams and predictions."
+  },
+  "nav": {
+    "home": "Home",
+    "matches": "Matches",
+    "teams": "Teams",
+    "predictions": "Predictions"
+  },
+  "home": {
+    "heading": "World Cup 2026",
+    "subheading": "Follow every match, explore the teams and challenge your friends.",
+    "cards": {
+      "matches": {
+        "title": "Matches",
+        "description": "Fixtures, results, groups and brackets."
+      },
+      "teams": {
+        "title": "Teams",
+        "description": "Browse the national teams and their fixtures."
+      },
+      "predictions": {
+        "title": "Predictions",
+        "description": "Predict results and climb the ranking."
+      }
+    }
+  },
+  "common": {
+    "comingSoon": "Coming soon",
+    "language": "Language",
+    "theme": "Theme"
+  }
+}

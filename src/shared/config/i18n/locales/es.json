@@ -1,0 +1,35 @@
+{
+  "app": {
+    "title": "Mundial 2026",
+    "tagline": "Vive el Mundial: partidos, equipos y predicciones."
+  },
+  "nav": {
+    "home": "Inicio",
+    "matches": "Partidos",
+    "teams": "Equipos",
+    "predictions": "Predicciones"
+  },
+  "home": {
+    "heading": "Mundial 2026",
+    "subheading": "Sigue cada partido, explora las selecciones y reta a tus amigos.",
+    "cards": {
+      "matches": {
+        "title": "Partidos",
+        "description": "Calendario, resultados, grupos y brackets."
+      },
+      "teams": {
+        "title": "Equipos",
+        "description": "Explora las selecciones y sus próximos partidos."
+      },
+      "predictions": {
+        "title": "Predicciones",
+        "description": "Predice resultados y sube en el ranking."
+      }
+    }
+  },
+  "common": {
+    "comingSoon": "Próximamente",
+    "language": "Idioma",
+    "theme": "Tema"
+  }
+}
