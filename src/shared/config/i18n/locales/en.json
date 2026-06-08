@@ -22,5 +22,51 @@
   "error": {
     "title": "Something went wrong",
     "description": "An unexpected error occurred."
+  },
+  "states": {
+    "error": "Couldn't load data. Please try again.",
+    "empty": "Nothing here yet."
+  },
+  "matches": {
+    "tabs": {
+      "upcoming": "Upcoming",
+      "results": "Results",
+      "groups": "Groups",
+      "bracket": "Bracket"
+    },
+    "empty": {
+      "upcoming": "No upcoming matches.",
+      "results": "No matches played yet.",
+      "bracket": "The knockout stage hasn't started."
+    },
+    "status": {
+      "SCHEDULED": "Scheduled",
+      "TIMED": "Scheduled",
+      "IN_PLAY": "Live",
+      "PAUSED": "Half-time",
+      "FINISHED": "Finished",
+      "POSTPONED": "Postponed",
+      "CANCELLED": "Cancelled"
+    },
+    "stage": {
+      "GROUP_STAGE": "Group stage",
+      "ROUND_OF_16": "Round of 16",
+      "QUARTER_FINALS": "Quarter-finals",
+      "SEMI_FINALS": "Semi-finals",
+      "THIRD_PLACE": "Third place",
+      "FINAL": "Final"
+    },
+    "standings": {
+      "position": "#",
+      "team": "Team",
+      "played": "P",
+      "won": "W",
+      "drawn": "D",
+      "lost": "L",
+      "goalsFor": "GF",
+      "goalsAgainst": "GA",
+      "goalDifference": "GD",
+      "points": "Pts"
+    }
   }
 }

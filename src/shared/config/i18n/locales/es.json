@@ -22,5 +22,51 @@
   "error": {
     "title": "Algo salió mal",
     "description": "Ocurrió un error inesperado."
+  },
+  "states": {
+    "error": "No se pudieron cargar los datos. Inténtalo de nuevo.",
+    "empty": "Aún no hay nada aquí."
+  },
+  "matches": {
+    "tabs": {
+      "upcoming": "Próximos",
+      "results": "Resultados",
+      "groups": "Grupos",
+      "bracket": "Eliminatorias"
+    },
+    "empty": {
+      "upcoming": "No hay partidos próximos.",
+      "results": "Aún no se ha jugado ningún partido.",
+      "bracket": "La fase eliminatoria no ha comenzado."
+    },
+    "status": {
+      "SCHEDULED": "Programado",
+      "TIMED": "Programado",
+      "IN_PLAY": "En vivo",
+      "PAUSED": "Descanso",
+      "FINISHED": "Finalizado",
+      "POSTPONED": "Aplazado",
+      "CANCELLED": "Cancelado"
+    },
+    "stage": {
+      "GROUP_STAGE": "Fase de grupos",
+      "ROUND_OF_16": "Octavos de final",
+      "QUARTER_FINALS": "Cuartos de final",
+      "SEMI_FINALS": "Semifinales",
+      "THIRD_PLACE": "Tercer puesto",
+      "FINAL": "Final"
+    },
+    "standings": {
+      "position": "#",
+      "team": "Equipo",
+      "played": "PJ",
+      "won": "G",
+      "drawn": "E",
+      "lost": "P",
+      "goalsFor": "GF",
+      "goalsAgainst": "GC",
+      "goalDifference": "DG",
+      "points": "Pts"
+    }
   }
 }
