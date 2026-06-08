@@ -12,7 +12,8 @@ export type MatchStatus =
 
 export type MatchStage =
   | 'GROUP_STAGE'
-  | 'ROUND_OF_16'
+  | 'LAST_32'
+  | 'LAST_16'
   | 'QUARTER_FINALS'
   | 'SEMI_FINALS'
   | 'THIRD_PLACE'

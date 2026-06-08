@@ -4,7 +4,8 @@ const UPCOMING_STATUSES = new Set<Match['status']>(['SCHEDULED', 'TIMED'])
 
 /** Knockout rounds in bracket order, for column layout. */
 export const KNOCKOUT_STAGES: MatchStage[] = [
-  'ROUND_OF_16',
+  'LAST_32',
+  'LAST_16',
   'QUARTER_FINALS',
   'SEMI_FINALS',
   'THIRD_PLACE',

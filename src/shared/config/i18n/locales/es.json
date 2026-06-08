@@ -50,7 +50,8 @@
     },
     "stage": {
       "GROUP_STAGE": "Fase de grupos",
-      "ROUND_OF_16": "Octavos de final",
+      "LAST_32": "Dieciseisavos de final",
+      "LAST_16": "Octavos de final",
       "QUARTER_FINALS": "Cuartos de final",
       "SEMI_FINALS": "Semifinales",
       "THIRD_PLACE": "Tercer puesto",

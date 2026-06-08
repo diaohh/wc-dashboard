@@ -50,7 +50,8 @@
     },
     "stage": {
       "GROUP_STAGE": "Group stage",
-      "ROUND_OF_16": "Round of 16",
+      "LAST_32": "Round of 32",
+      "LAST_16": "Round of 16",
       "QUARTER_FINALS": "Quarter-finals",
       "SEMI_FINALS": "Semi-finals",
       "THIRD_PLACE": "Third place",

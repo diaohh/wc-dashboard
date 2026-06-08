@@ -53,7 +53,7 @@ describe('selectByStage', () => {
     const matches = [
       match('1', '2026-07-05T18:00:00Z', 'SCHEDULED', 'QUARTER_FINALS'),
       match('2', '2026-07-04T18:00:00Z', 'SCHEDULED', 'QUARTER_FINALS'),
-      match('3', '2026-06-30T18:00:00Z', 'SCHEDULED', 'ROUND_OF_16'),
+      match('3', '2026-06-30T18:00:00Z', 'SCHEDULED', 'LAST_16'),
     ]
     const result = selectByStage(matches, 'QUARTER_FINALS')
     expect(result.map((m) => m.id)).toEqual(['2', '1'])

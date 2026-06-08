@@ -81,7 +81,8 @@ const VALID_STATUSES = new Set<MatchStatus>([
 
 const VALID_STAGES = new Set<MatchStage>([
   'GROUP_STAGE',
-  'ROUND_OF_16',
+  'LAST_32',
+  'LAST_16',
   'QUARTER_FINALS',
   'SEMI_FINALS',
   'THIRD_PLACE',
