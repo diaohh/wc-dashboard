@@ -9,27 +9,18 @@
     "teams": "Equipos",
     "predictions": "Predicciones"
   },
-  "home": {
-    "heading": "Mundial 2026",
-    "subheading": "Sigue cada partido, explora las selecciones y reta a tus amigos.",
-    "cards": {
-      "matches": {
-        "title": "Partidos",
-        "description": "Calendario, resultados, grupos y brackets."
-      },
-      "teams": {
-        "title": "Equipos",
-        "description": "Explora las selecciones y sus próximos partidos."
-      },
-      "predictions": {
-        "title": "Predicciones",
-        "description": "Predice resultados y sube en el ranking."
-      }
-    }
-  },
   "common": {
     "comingSoon": "Próximamente",
     "language": "Idioma",
     "theme": "Tema"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe.",
+    "back": "Volver al inicio"
+  },
+  "error": {
+    "title": "Algo salió mal",
+    "description": "Ocurrió un error inesperado."
   }
 }

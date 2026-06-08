@@ -9,27 +9,18 @@
     "teams": "Teams",
     "predictions": "Predictions"
   },
-  "home": {
-    "heading": "World Cup 2026",
-    "subheading": "Follow every match, explore the teams and challenge your friends.",
-    "cards": {
-      "matches": {
-        "title": "Matches",
-        "description": "Fixtures, results, groups and brackets."
-      },
-      "teams": {
-        "title": "Teams",
-        "description": "Browse the national teams and their fixtures."
-      },
-      "predictions": {
-        "title": "Predictions",
-        "description": "Predict results and climb the ranking."
-      }
-    }
-  },
   "common": {
     "comingSoon": "Coming soon",
     "language": "Language",
     "theme": "Theme"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist.",
+    "back": "Back to home"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred."
   }
 }
