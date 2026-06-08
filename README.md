@@ -163,7 +163,7 @@ Phases are sequential; each builds on the previous. Granular tasks live in
 
 | Phase | Scope                                                               | Status         |
 | ----- | ------------------------------------------------------------------- | -------------- |
-| 0     | Foundations (Tailwind, shadcn, router, i18n, FSD skeleton, tooling) | ⬜ Not started |
+| 0     | Foundations (Tailwind, shadcn, router, i18n, FSD skeleton, tooling) | ✅ Done         |
 | 1     | Firebase & data pipeline (Firestore, sync job, GitHub Actions)      | ⬜ Not started |
 | 2     | Matches section (lists, groups, brackets)                           | ⬜ Not started |
 | 3     | Teams section (search, detail, fixtures)                            | ⬜ Not started |
