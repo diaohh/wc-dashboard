@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+
 import { cn } from '@/shared/lib/utils'
 import type { Team } from '../model/types'
 
@@ -8,6 +10,8 @@ interface TeamLabelProps {
 
 /** Crest + name for a single team. Renders a dash when the team is unknown. */
 export function TeamLabel({ team, className }: TeamLabelProps) {
+  const { t } = useTranslation()
+
   if (!team) {
     return <span className="text-muted-foreground">—</span>
   }
@@ -20,7 +24,9 @@ export function TeamLabel({ team, className }: TeamLabelProps) {
         className="size-5 shrink-0 object-contain"
         loading="lazy"
       />
-      <span className="truncate font-medium">{team.name}</span>
+      <span className="truncate font-medium">
+        {t(`teams.${team.code}`, { defaultValue: team.name })}
+      </span>
     </span>
   )
 }
