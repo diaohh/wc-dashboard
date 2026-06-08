@@ -22,6 +22,7 @@ export interface Match {
   status: MatchStatus
   stage: MatchStage
   group: string | null
+  venue: string | null
   homeTeamId: string
   awayTeamId: string
   score: {

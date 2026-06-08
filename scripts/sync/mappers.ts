@@ -102,6 +102,7 @@ export function mapMatches(matches: FDMatch[]): Match[] {
       status: m.status as MatchStatus,
       stage: m.stage as MatchStage,
       group: m.group ?? null,
+      venue: m.venue ?? null,
       homeTeamId: String(m.homeTeam.id),
       awayTeamId: String(m.awayTeam.id),
       score: {

@@ -19,6 +19,7 @@ const match = (
   status,
   stage,
   group: stage === 'GROUP_STAGE' ? 'GROUP_A' : null,
+  venue: null,
   homeTeamId: 'h',
   awayTeamId: 'a',
   score: { home: null, away: null },

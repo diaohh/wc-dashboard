@@ -47,6 +47,7 @@ export interface FDMatch {
   status: string
   stage: string
   group: string | null
+  venue: string | null
   homeTeam: Pick<FDTeam, 'id'>
   awayTeam: Pick<FDTeam, 'id'>
   score: FDScore
