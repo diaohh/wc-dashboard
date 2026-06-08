@@ -15,19 +15,25 @@ export function MatchDays({ days, teamsById }: MatchDaysProps) {
   const { i18n } = useTranslation()
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-10">
       {days.map((day) => (
-        <section key={day.dayKey} className="space-y-3">
-          <h2 className="text-muted-foreground text-sm font-semibold capitalize">
-            {formatDayHeading(day.matches[0].utcDate, i18n.language)}
-          </h2>
-          <ul className="space-y-2">
+        <section key={day.dayKey} className="space-y-5">
+          <div className="flex items-center gap-4">
+            <h2 className="text-lg font-black tracking-tight capitalize">
+              {formatDayHeading(day.matches[0].utcDate, i18n.language)}
+            </h2>
+            <div className="from-border h-px flex-grow bg-gradient-to-r to-transparent" />
+          </div>
+          <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {day.matches.map((match, index) => (
               <motion.li
                 key={match.id}
-                initial={{ opacity: 0, y: 8 }}
+                initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: Math.min(index * 0.03, 0.3) }}
+                transition={{
+                  delay: Math.min(index * 0.04, 0.4),
+                  ease: [0.16, 1, 0.3, 1],
+                }}
               >
                 <MatchCard
                   match={match}

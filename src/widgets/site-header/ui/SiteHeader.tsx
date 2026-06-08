@@ -16,9 +16,12 @@ export function SiteHeader() {
   const { t } = useTranslation()
 
   return (
-    <header className="bg-background/80 sticky top-0 z-50 w-full border-b backdrop-blur">
-      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-4">
-        <NavLink to="/" className="font-semibold tracking-tight">
+    <header className="bg-background/70 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur-xl">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
+        <NavLink
+          to="/"
+          className="from-wc-gold bg-gradient-to-r to-yellow-600 bg-clip-text text-xl font-black tracking-tighter text-transparent"
+        >
           ⚽ {t('app.title')}
         </NavLink>
 
@@ -30,8 +33,8 @@ export function SiteHeader() {
               end={item.end}
               className={({ isActive }) =>
                 cn(
-                  'text-muted-foreground hover:text-foreground rounded-md px-3 py-1.5 text-sm font-medium transition-colors',
-                  isActive && 'bg-accent text-accent-foreground',
+                  'hover:text-foreground rounded-full px-3 py-1.5 text-sm font-semibold transition-colors',
+                  isActive ? 'text-wc-gold' : 'text-muted-foreground',
                 )
               }
             >

@@ -16,7 +16,10 @@ import type { Match } from '../model/types'
 /** Fetch every match once, ordered by date. Used by results and the bracket. */
 export async function fetchMatches(): Promise<Match[]> {
   // Single-field order → no composite index required.
-  const matchesQuery = query(collection(db, 'matches'), orderBy('utcDate', 'asc'))
+  const matchesQuery = query(
+    collection(db, 'matches'),
+    orderBy('utcDate', 'asc'),
+  )
   const snapshot = await getDocs(matchesQuery)
   return snapshot.docs.map((doc) => doc.data() as Match)
 }
