@@ -7,3 +7,16 @@ export {
   CardContent,
   CardFooter,
 } from './card'
+export { Badge, badgeVariants } from './badge'
+export { Skeleton } from './skeleton'
+export { QueryState } from './QueryState'
+export {
+  Table,
+  TableHeader,
+  TableBody,
+  TableFooter,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableCaption,
+} from './table'
