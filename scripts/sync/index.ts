@@ -47,7 +47,9 @@ async function run() {
   const teams: Team[] = mapTeams(teamsRes.teams, groupMap)
   const matches: Match[] = mapMatches(matchesRes.matches)
 
-  console.log(`Writing ${teams.length} teams, ${groups.length} groups, ${matches.length} matches…`)
+  console.log(
+    `Writing ${teams.length} teams, ${groups.length} groups, ${matches.length} matches…`,
+  )
 
   await Promise.all([
     writeInBatches(db, 'teams', teams),

@@ -16,7 +16,9 @@ function headers(): Record<string, string> {
 async function get<T>(path: string): Promise<T> {
   const res = await fetch(`${BASE_URL}${path}`, { headers: headers() })
   if (!res.ok) {
-    throw new Error(`football-data.org ${path} → ${res.status} ${res.statusText}`)
+    throw new Error(
+      `football-data.org ${path} → ${res.status} ${res.statusText}`,
+    )
   }
   return res.json() as Promise<T>
 }

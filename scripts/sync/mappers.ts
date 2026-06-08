@@ -1,4 +1,11 @@
-import type { Group, Match, MatchStage, MatchStatus, Team } from './domain.js'
+import type {
+  Group,
+  Match,
+  MatchStage,
+  MatchStatus,
+  Standing,
+  Team,
+} from './domain.js'
 import type { FDMatch, FDStandingGroup, FDTeam } from './types.js'
 
 export function buildGroupMap(
@@ -14,21 +21,38 @@ export function buildGroupMap(
   return map
 }
 
-export function mapGroups(standings: FDStandingGroup[]): Group[] {
-  const groupTeams = new Map<string, number[]>()
-  for (const standing of standings) {
-    if (!standing.group) continue
-    if (!groupTeams.has(standing.group)) groupTeams.set(standing.group, [])
-    for (const row of standing.table) {
-      groupTeams.get(standing.group)!.push(row.team.id)
-    }
-  }
+function titleCase(groupId: string): string {
+  // "GROUP_A" → "Group A"
+  return groupId
+    .split('_')
+    .map((word) => word[0] + word.slice(1).toLowerCase())
+    .join(' ')
+}
 
-  return Array.from(groupTeams.entries()).map(([groupId, teamIds]) => ({
-    id: groupId,
-    name: groupId.replace('_', ' ').replace(/(\w)(\w*)/g, (_, f: string, r: string) => f + r.toLowerCase()),
-    teamIds: teamIds.map(String),
-  }))
+export function mapGroups(standings: FDStandingGroup[]): Group[] {
+  return standings
+    .filter((standing) => standing.group)
+    .map((standing) => {
+      const rows: Standing[] = standing.table.map((row) => ({
+        teamId: String(row.team.id),
+        position: row.position,
+        playedGames: row.playedGames,
+        won: row.won,
+        draw: row.draw,
+        lost: row.lost,
+        goalsFor: row.goalsFor,
+        goalsAgainst: row.goalsAgainst,
+        goalDifference: row.goalDifference,
+        points: row.points,
+      }))
+
+      return {
+        id: standing.group!,
+        name: titleCase(standing.group!),
+        teamIds: rows.map((r) => r.teamId),
+        standings: rows,
+      }
+    })
 }
 
 export function mapTeams(
