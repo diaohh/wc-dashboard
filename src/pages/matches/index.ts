@@ -1,1 +1,5 @@
-export { MatchesPage } from './ui/MatchesPage'
+export { MatchesLayout } from './ui/MatchesLayout'
+export { UpcomingMatchesPage } from './ui/UpcomingMatchesPage'
+export { ResultsPage } from './ui/ResultsPage'
+export { GroupsPage } from './ui/GroupsPage'
+export { BracketPage } from './ui/BracketPage'

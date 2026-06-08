@@ -1,7 +1,13 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import { HomePage } from '@/pages/home'
-import { MatchesPage } from '@/pages/matches'
+import {
+  BracketPage,
+  GroupsPage,
+  MatchesLayout,
+  ResultsPage,
+  UpcomingMatchesPage,
+} from '@/pages/matches'
 import { TeamsPage } from '@/pages/teams'
 import { PredictionsPage } from '@/pages/predictions'
 import { NotFoundPage } from '@/pages/not-found'
@@ -16,7 +22,16 @@ export const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <RouteError />,
     children: [
-      { path: '/matches', element: <MatchesPage /> },
+      {
+        path: '/matches',
+        element: <MatchesLayout />,
+        children: [
+          { index: true, element: <UpcomingMatchesPage /> },
+          { path: 'results', element: <ResultsPage /> },
+          { path: 'groups', element: <GroupsPage /> },
+          { path: 'bracket', element: <BracketPage /> },
+        ],
+      },
       { path: '/teams', element: <TeamsPage /> },
       { path: '/predictions', element: <PredictionsPage /> },
       { path: '*', element: <NotFoundPage /> },
