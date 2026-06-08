@@ -71,11 +71,19 @@
   --color-ring: var(--ring);
 }
 
+/* Brand tokens (World Cup palette) + typography */
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --color-wc-gold: #d4af37;
+  --color-wc-green: #006400;
+  --color-wc-dark: #111827;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 }
