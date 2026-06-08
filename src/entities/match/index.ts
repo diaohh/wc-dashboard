@@ -7,6 +7,6 @@ export {
   selectUpcoming,
   type MatchDay,
 } from './model/selectors'
-export { fetchMatches } from './api/queries'
-export { useMatches } from './api/hooks'
+export { fetchMatches, fetchUpcomingMatchesPage } from './api/queries'
+export { useMatches, useInfiniteUpcomingMatches } from './api/hooks'
 export { MatchCard } from './ui/MatchCard'

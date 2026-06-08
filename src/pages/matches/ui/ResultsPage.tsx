@@ -1,5 +1,5 @@
-import { MatchList } from '@/widgets/match-list'
+import { ResultsList } from '@/widgets/match-list'
 
 export function ResultsPage() {
-  return <MatchList variant="results" />
+  return <ResultsList />
 }

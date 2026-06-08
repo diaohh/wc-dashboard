@@ -1,1 +1,2 @@
-export { MatchList } from './ui/MatchList'
+export { ResultsList } from './ui/ResultsList'
+export { UpcomingMatches } from './ui/UpcomingMatches'
