@@ -80,6 +80,13 @@
       "form": "Historial"
     }
   },
+  "auth": {
+    "signOut": "Cerrar sesión"
+  },
+  "calendar": {
+    "add": "Agregar al Calendario",
+    "added": "¡Listo!"
+  },
   "teamsPage": {
     "title": "Selecciones",
     "subtitle": "Explora los 48 equipos clasificados.",

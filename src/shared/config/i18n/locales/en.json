@@ -80,6 +80,13 @@
       "form": "Form"
     }
   },
+  "auth": {
+    "signOut": "Sign out"
+  },
+  "calendar": {
+    "add": "Add to Calendar",
+    "added": "Added!"
+  },
   "teamsPage": {
     "title": "Teams",
     "subtitle": "Explore all 48 qualified teams.",

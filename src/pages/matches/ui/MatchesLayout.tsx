@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 
 import { cn } from '@/shared/lib/utils'
+import { SyncButton } from '@/features/calendar-sync'
 
 const tabs = [
   { to: '/matches', key: 'matches.tabs.upcoming', end: true },
@@ -21,25 +22,30 @@ export function MatchesLayout() {
         {t('nav.matches')}
       </h1>
 
-      <nav className="bg-card mt-6 flex w-max max-w-full gap-1 overflow-x-auto rounded-full border p-1.5 shadow-sm">
-        {tabs.map((tab) => (
-          <NavLink
-            key={tab.to}
-            to={tab.to}
-            end={tab.end}
-            className={({ isActive }) =>
-              cn(
-                'shrink-0 rounded-full px-5 py-2 text-sm font-bold transition-all',
-                isActive
-                  ? 'bg-wc-gold text-white shadow'
-                  : 'text-muted-foreground hover:text-foreground hover:bg-accent',
-              )
-            }
-          >
-            {t(tab.key)}
-          </NavLink>
-        ))}
-      </nav>
+      <div className="mt-6 flex flex-wrap items-center gap-3">
+        <nav className="bg-card flex w-max max-w-full gap-1 overflow-x-auto rounded-full border p-1.5 shadow-sm">
+          {tabs.map((tab) => (
+            <NavLink
+              key={tab.to}
+              to={tab.to}
+              end={tab.end}
+              className={({ isActive }) =>
+                cn(
+                  'shrink-0 rounded-full px-5 py-2 text-sm font-bold transition-all',
+                  isActive
+                    ? 'bg-wc-gold text-white shadow'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-accent',
+                )
+              }
+            >
+              {t(tab.key)}
+            </NavLink>
+          ))}
+        </nav>
+        <div className="ml-auto shrink-0">
+          <SyncButton />
+        </div>
+      </div>
 
       <motion.div
         key={location.pathname}
