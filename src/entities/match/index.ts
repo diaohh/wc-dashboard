@@ -3,6 +3,7 @@ export {
   KNOCKOUT_STAGES,
   groupByDay,
   selectByStage,
+  selectMatchesByTeam,
   selectPlayed,
   selectUpcoming,
   type MatchDay,

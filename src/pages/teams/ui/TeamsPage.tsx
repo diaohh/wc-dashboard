@@ -1,12 +1,39 @@
-import { useTranslation } from 'react-i18next'
+import { useState } from 'react'
+
+import type { Group } from '@/entities/group'
+import { useMatches } from '@/entities/match'
+import { selectTeamsById, type Team, useTeams } from '@/entities/team'
+import { TeamModal } from '@/widgets/team-detail'
+import { TeamsGrid } from '@/widgets/team-list'
+
+interface Selected {
+  team: Team
+  group: Group | undefined
+}
 
 export function TeamsPage() {
-  const { t } = useTranslation()
+  const [selected, setSelected] = useState<Selected | null>(null)
+
+  const matchesQuery = useMatches()
+  const teamsQuery = useTeams()
+
+  const teamsById = selectTeamsById(teamsQuery.data ?? [])
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-12">
-      <h1 className="text-3xl font-bold tracking-tight">{t('nav.teams')}</h1>
-      <p className="text-muted-foreground mt-2">{t('common.comingSoon')}</p>
-    </section>
+    <>
+      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <TeamsGrid onTeamSelect={(team, group) => setSelected({ team, group })} />
+      </section>
+
+      {selected && (
+        <TeamModal
+          team={selected.team}
+          group={selected.group}
+          allMatches={matchesQuery.data ?? []}
+          teamsById={teamsById}
+          onClose={() => setSelected(null)}
+        />
+      )}
+    </>
   )
 }

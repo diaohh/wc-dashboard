@@ -30,6 +30,12 @@ export function selectByStage(matches: Match[], stage: MatchStage): Match[] {
     .sort((a, b) => a.utcDate.localeCompare(b.utcDate))
 }
 
+export function selectMatchesByTeam(matches: Match[], teamId: string): Match[] {
+  return matches
+    .filter((m) => m.homeTeamId === teamId || m.awayTeamId === teamId)
+    .sort((a, b) => a.utcDate.localeCompare(b.utcDate))
+}
+
 export interface MatchDay {
   dayKey: string
   matches: Match[]

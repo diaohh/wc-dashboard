@@ -6,7 +6,7 @@
   "nav": {
     "home": "Inicio",
     "matches": "Partidos",
-    "teams": "Equipos",
+    "teams": "Selecciones",
     "predictions": "Predicciones"
   },
   "common": {
@@ -30,6 +30,13 @@
   "matches": {
     "groupLabel": "Grupo {{letter}}",
     "vs": "vs",
+    "tbd": "Por definir",
+    "legend": {
+      "win": "Victoria",
+      "draw": "Empate",
+      "loss": "Derrota",
+      "pending": "Por jugar"
+    },
     "tabs": {
       "upcoming": "Próximos",
       "results": "Resultados",
@@ -69,8 +76,19 @@
       "goalsFor": "GF",
       "goalsAgainst": "GC",
       "goalDifference": "DG",
-      "points": "Pts"
+      "points": "Pts",
+      "form": "Historial"
     }
+  },
+  "teamsPage": {
+    "title": "Selecciones",
+    "subtitle": "Explora los 48 equipos clasificados.",
+    "searchPlaceholder": "Buscar equipo, ej: Colombia...",
+    "noResults": "Ningún equipo coincide con tu búsqueda.",
+    "filterAll": "Todos",
+    "filterUpcoming": "Próximos",
+    "filterFinished": "Finalizados",
+    "noMatches": "No hay partidos en esta categoría."
   },
   "teams": {
     "ALG": "Argelia",

@@ -30,6 +30,13 @@
   "matches": {
     "groupLabel": "Group {{letter}}",
     "vs": "vs",
+    "tbd": "TBD",
+    "legend": {
+      "win": "Win",
+      "draw": "Draw",
+      "loss": "Loss",
+      "pending": "Upcoming"
+    },
     "tabs": {
       "upcoming": "Upcoming",
       "results": "Results",
@@ -69,8 +76,19 @@
       "goalsFor": "GF",
       "goalsAgainst": "GA",
       "goalDifference": "GD",
-      "points": "Pts"
+      "points": "Pts",
+      "form": "Form"
     }
+  },
+  "teamsPage": {
+    "title": "Teams",
+    "subtitle": "Explore all 48 qualified teams.",
+    "searchPlaceholder": "Search team, e.g. France...",
+    "noResults": "No teams match your search.",
+    "filterAll": "All",
+    "filterUpcoming": "Upcoming",
+    "filterFinished": "Finished",
+    "noMatches": "No matches in this category."
   },
   "teams": {
     "ALG": "Algeria",
