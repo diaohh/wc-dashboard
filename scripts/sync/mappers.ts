@@ -22,10 +22,10 @@ export function buildGroupMap(
 }
 
 function titleCase(groupId: string): string {
-  // "GROUP_A" → "Group A"
+  // "GROUP_A" or "Group A" → "Group A"
   return groupId
-    .split('_')
-    .map((word) => word[0] + word.slice(1).toLowerCase())
+    .split(/[_\s]+/)
+    .map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
     .join(' ')
 }
 
@@ -44,6 +44,7 @@ export function mapGroups(standings: FDStandingGroup[]): Group[] {
         goalsAgainst: row.goalsAgainst,
         goalDifference: row.goalDifference,
         points: row.points,
+        form: row.form ?? null,
       }))
 
       return {

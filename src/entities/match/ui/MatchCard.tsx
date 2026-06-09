@@ -26,7 +26,9 @@ export function MatchCard({ match, homeTeam, awayTeam }: MatchCardProps) {
   const isLive = LIVE_STATUSES.has(match.status)
 
   const contextLabel = match.group
-    ? t('matches.groupLabel', { letter: match.group.split('_')[1] })
+    ? t('matches.groupLabel', {
+        letter: match.group.trim().slice(-1).toUpperCase(),
+      })
     : t(`matches.stage.${match.stage}`)
 
   return (
@@ -98,11 +100,12 @@ function TeamSide({ team }: { team?: TeamRef }) {
       <img
         src={team.crest}
         alt={name}
-        title={name}
         loading="lazy"
         className="border-border size-14 shrink-0 rounded-full border-2 object-cover shadow-sm transition-transform duration-300 group-hover:scale-110"
       />
-      <span className="text-sm font-bold">{team.code}</span>
+      <span className="text-center text-sm leading-tight font-bold text-balance">
+        {name}
+      </span>
     </div>
   )
 }

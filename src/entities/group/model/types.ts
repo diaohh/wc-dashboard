@@ -9,6 +9,7 @@ export interface Standing {
   goalsAgainst: number
   goalDifference: number
   points: number
+  form: string | null
 }
 
 export interface Group {

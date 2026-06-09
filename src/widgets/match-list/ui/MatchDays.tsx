@@ -24,7 +24,7 @@ export function MatchDays({ days, teamsById }: MatchDaysProps) {
             </h2>
             <div className="from-border h-px flex-grow bg-gradient-to-r to-transparent" />
           </div>
-          <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <ul className="grid gap-4 sm:grid-cols-2">
             {day.matches.map((match, index) => (
               <motion.li
                 key={match.id}

@@ -1,5 +1,6 @@
+import { motion } from 'motion/react'
 import { useTranslation } from 'react-i18next'
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useLocation } from 'react-router-dom'
 
 import { cn } from '@/shared/lib/utils'
 
@@ -12,17 +13,10 @@ const tabs = [
 
 export function MatchesLayout() {
   const { t } = useTranslation()
+  const location = useLocation()
 
   return (
-    <section className="relative mx-auto max-w-6xl px-4 py-8">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
-      >
-        <div className="bg-wc-gold/10 absolute -top-10 -right-20 size-96 rounded-full blur-3xl" />
-        <div className="bg-wc-gold/5 absolute bottom-1/4 -left-32 size-[40rem] rounded-full blur-3xl" />
-      </div>
-
+    <section className="mx-auto max-w-6xl px-4 py-8">
       <h1 className="text-3xl font-black tracking-tight sm:text-4xl">
         {t('nav.matches')}
       </h1>
@@ -47,9 +41,15 @@ export function MatchesLayout() {
         ))}
       </nav>
 
-      <div className="mt-8">
+      <motion.div
+        key={location.pathname}
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+        className="mt-8"
+      >
         <Outlet />
-      </div>
+      </motion.div>
     </section>
   )
 }

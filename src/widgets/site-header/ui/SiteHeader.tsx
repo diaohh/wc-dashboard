@@ -17,15 +17,16 @@ export function SiteHeader() {
 
   return (
     <header className="bg-background/70 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
+      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between gap-4 px-4">
         <NavLink
           to="/"
-          className="from-wc-gold bg-gradient-to-r to-yellow-600 bg-clip-text text-xl font-black tracking-tighter text-transparent"
+          aria-label="WC2026"
+          className="from-wc-gold bg-gradient-to-r to-yellow-600 bg-clip-text text-2xl font-black tracking-tighter text-transparent transition-transform duration-300 select-none hover:scale-105"
         >
-          ⚽ {t('app.title')}
+          ⚽ WC2026
         </NavLink>
 
-        <nav className="hidden items-center gap-1 sm:flex">
+        <nav className="hidden items-center gap-2 sm:flex">
           {navItems.map((item) => (
             <NavLink
               key={item.to}
@@ -33,12 +34,24 @@ export function SiteHeader() {
               end={item.end}
               className={({ isActive }) =>
                 cn(
-                  'hover:text-foreground rounded-full px-3 py-1.5 text-sm font-semibold transition-colors',
+                  'group hover:text-foreground relative px-3 py-2 text-base font-semibold transition-colors',
                   isActive ? 'text-wc-gold' : 'text-muted-foreground',
                 )
               }
             >
-              {t(item.key)}
+              {({ isActive }) => (
+                <>
+                  {t(item.key)}
+                  <span
+                    className={cn(
+                      'bg-wc-gold absolute inset-x-3 -bottom-0.5 h-0.5 origin-center rounded-full transition-transform duration-300',
+                      isActive
+                        ? 'scale-x-100'
+                        : 'scale-x-0 group-hover:scale-x-100',
+                    )}
+                  />
+                </>
+              )}
             </NavLink>
           ))}
         </nav>

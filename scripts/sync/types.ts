@@ -23,6 +23,7 @@ export interface FDStandingRow {
   goalsFor: number
   goalsAgainst: number
   goalDifference: number
+  form: string | null
 }
 
 export interface FDStandingGroup {
