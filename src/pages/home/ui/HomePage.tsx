@@ -16,12 +16,19 @@ export function HomePage() {
 
   return (
     <div className="relative flex min-h-svh items-center justify-center overflow-hidden">
-      {/*
-        Background placeholder. TODO: swap for a looping football video/gif, or
-        an image with a dark overlay (see example-mainpage.html). Gradient for now.
-      */}
-      <div className="bg-wc-dark absolute inset-0 -z-20 bg-[radial-gradient(circle_at_50%_25%,rgba(16,98,52,0.45),transparent_55%)]" />
-      <div className="from-wc-dark/80 to-wc-green/80 absolute inset-0 -z-10 bg-gradient-to-b backdrop-blur-sm" />
+      {/* Background video */}
+      <div className="bg-wc-dark absolute inset-0 -z-20" />
+      <video
+        src="/bg-video.webm"
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 h-full w-full object-cover motion-reduce:hidden"
+      />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 -z-10 bg-black/60 motion-reduce:bg-wc-dark/95" />
 
       {/* Subtle top-right controls */}
       <div className="absolute top-4 right-4 z-20 flex items-center gap-1 text-white">
